@@ -1,0 +1,5 @@
+_name_: interrope
+dim: ${oc.select:model.backbone.seq_cell.k_channel,null}
+max_num_chunk: ${eval:${data.seq_len} // ${.chunk_size}}
+chunk_size: ${model.backbone.seq_cell.chunk_size}
+base: 10000
